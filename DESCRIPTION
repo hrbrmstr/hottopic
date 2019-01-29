@@ -1,6 +1,6 @@
 Package: hottopic
 Type: Package
-Title: hottopic title goes here otherwise CRAN checks fail
+Title:  Retrieve Hot Topics (Trends) for a Given Country from 'Google' Trends
 Version: 0.1.0
 Date: 2019-01-29
 Authors@R: c(
@@ -8,7 +8,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: Retrieve Hot Topics (Trends) for a Given Country from 'Google' Trends.
 URL: https://gitlab.com/hrbrmstr/hottopic
 BugReports: https://gitlab.com/hrbrmstr/hottopic/issues
 Encoding: UTF-8
@@ -19,7 +19,9 @@ Suggests:
 Depends:
     R (>= 3.2.0)
 Imports:
+    xml2,
     httr,
-    jsonlite
+    jsonlite,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

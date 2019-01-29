@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: inline
 ---
 ```{r pkg-knitr-opts, include=FALSE}
-knitr$opts_chunk$set(collapse=TRUE, fig.retina=2, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(collapse=TRUE, fig.retina=2, message=FALSE, warning=FALSE)
 options(width=120)
 ```
 
@@ -14,11 +14,18 @@ options(width=120)
 
 # hottopic
 
+Retrieve Hot Topics (Trends) for a Given Country from 'Google' Trends
+
 ## Description
+
+Retrieve Hot Topics (Trends) for a Given Country from 'Google' Trends
 
 ## What's Inside The Tin
 
 The following functions are implemented:
+
+- `get_topic`:	Retrieve Hot Topics (Trends) for a Given Country
+- `topic_countries`:	Return a character vector of supported countries
 
 ## Installation
 
@@ -32,10 +39,21 @@ devtools::install_github("hrbrmstr/hottopic")
 
 ```{r lib-ex}
 library(hottopic)
+library(tibble) # for printing
 
 # current version
 packageVersion("hottopic")
 
+```
+
+### Countries
+
+```{r ccs}
+topic_countries()
+```
+
+```{r topics}
+get_topic()
 ```
 
 ## hottopic Metrics

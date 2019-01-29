@@ -4,7 +4,7 @@
 \name{hottopic}
 \alias{hottopic}
 \alias{hottopic-package}
-\title{...}
+\title{Retrieve Hot Topics (Trends) for a Given Country from 'Google' Trends}
 \description{
 \itemize{
 \item URL: \url{https://gitlab.com/hrbrmstr/hottopic}
