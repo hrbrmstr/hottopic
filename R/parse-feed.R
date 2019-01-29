@@ -43,7 +43,7 @@ parse_feed <- function(x) {
         key = "key",
         news_item_title = pe(xta(.x, ".//ht:news_item_title")),
         news_item_snippet = pe(xta(.x, ".//ht:news_item_snippet")),
-        news_item_url = xt(.x, ".//ht:news_item_url"),
+        news_item_url = xta(.x, ".//ht:news_item_url"),
         news_item_source = pe(xta(.x, ".//ht:news_item_source")),
         stringsAsFactors = FALSE
       ) -> .z
