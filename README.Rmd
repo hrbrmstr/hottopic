@@ -1,7 +1,7 @@
 ---
 output: rmarkdown::github_document
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 ```{r pkg-knitr-opts, include=FALSE}
 knitr::opts_chunk$set(collapse=TRUE, fig.retina=2, message=FALSE, warning=FALSE)
@@ -24,7 +24,7 @@ Retrieve Hot Topics (Trends) for a Given Country from 'Google' Trends
 
 The following functions are implemented:
 
-- `get_topic`:	Retrieve Hot Topics (Trends) for a Given Country
+- `get_topics`:	Retrieve Hot Topics (Trends) for a Given Country
 - `topic_countries`:	Return a character vector of supported countries
 
 ## Installation
@@ -53,7 +53,17 @@ topic_countries()
 ```
 
 ```{r topics}
-get_topic()
+get_topics()
+```
+
+```{r morethanone}
+do.call(
+  rbind.data.frame,
+  lapply(
+    c("United States", "France", "Germany"),
+    get_topics
+  )
+)
 ```
 
 ## hottopic Metrics

@@ -5,7 +5,7 @@
 #' @export
 #' @examples
 #' x <- get_topic()
-get_topic <- function(country = "United States") {
+get_topics <- function(country = "United States") {
 
   if (!(country %in% names(.topic_ccs))) {
     stop("Unknown/unsupported country.", call.=FALSE)
